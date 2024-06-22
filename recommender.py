@@ -29,7 +29,7 @@ def fetch_poster(movie_id):
     Fetch the poster URL for a movie using The Movie Database (TMDb) API.
     """
     # api_key = os.getenv('API_KEY')  # Get API key from environment variable
-    api_key = '5ec0853ef459dc088bbddffcf82ba8dc'
+    api_key = 'YOUR_API_KEY'
     url = f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US'
     
     try:
