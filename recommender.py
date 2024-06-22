@@ -91,7 +91,7 @@ def recommend_movies(query, data, similarity_matrix, top_n=10):
         recommendations = get_similar_movies(query, data, similarity_matrix, top_n)
         return {'recommendations': recommendations, 'movie_found': True}
     else:
-        top_movies = data.nlargest(top_n, 'score')[['title', 'movie_id', 'genres', 'score']]
+        top_movies = data.nlargest(top_n, 'score')[['title', 'movie_id', 'genres', 'score', 'summary']]
         top_movies['movie_id'] = top_movies['movie_id'].apply(int)
         top_movies['score'] = top_movies['score'].apply(float)
         
@@ -102,7 +102,7 @@ def recommend_movies(query, data, similarity_matrix, top_n=10):
                 'movie_id': row['movie_id'],
                 'genres': row['genres'],
                 'score': row['score'],
-                'summary': row['summary'],
+                'summary': row['summary'] if 'summary' in row else '',
                 'poster_url': fetch_poster(row['movie_id'])
             })
         
