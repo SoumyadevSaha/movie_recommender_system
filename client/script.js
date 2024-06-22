@@ -45,13 +45,13 @@ document.getElementById('search-btn').addEventListener('click', async () => {
                         <img src="${movie.poster_url}" alt="${movie.title}" class="w-full h-auto rounded-md">
                         <h2 class="text-xl font-bold mt-2">${movie.title}</h2>
                         <p class="text-green-500 mt-2">
-                            <span class="font-bold text-gray-600">Genres </span>${
+                            <span class="font-bold text-gray-600">Genres: &ensp;</span>${
                                 genre_list.map(genre => `<span class="inline-block bg-white border border-gray-300 rounded px-2 py-1 text-blue-500 mr-1">${genre}</span>`).join('')
                             }
                         </p>
                         <p class="text-gray-600 mt-2">
-                            Rating <span class="inline-block bg-yellow-400 text-black font-bold rounded px-2">${movie.score}</span>
-                            <i class="info_icon fas fa-info-circle text-gray-600 ml-1 cursor-pointer p-2 rounded-full hover:text-green-500"></i>
+                        <span class="font-bold text-gray-600">Rating: &ensp; </span><span class="inline-block bg-yellow-400 text-black font-bold rounded px-2">${movie.score}</span>
+                            <i class="info_icon fas fa-info-circle text-gray-600 cursor-pointer p-2 rounded-full hover:text-green-500"></i>
                         </p>
                         <div class="_popup absolute left-0 top-0 w-full bg-white border border-gray-300 p-4 rounded-md shadow-lg opacity-0 hidden">
                             <p class="text-gray-700">${movie.summary}</p>
