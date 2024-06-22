@@ -1,0 +1,26 @@
+Q. What is a recommender system ?
+=> The system that predicts the preference of a user for a particular item. Spotify, youtube, facebook, instagram, netflix, all these platforms uses recommender systems.
+
+# Types of recommender systems : 
+1. Content Based, 2. Collaborative filtering Based, 3. Hybrid
+
+## Content Based : 
+- Based on the content the user is feeding on, that similarity is captured and user is feeded more of similar content, these methods uses tags etc.
+
+## Collaborative filtering Based :
+- Let's say 2 users A and B both puts their rating nearly similar for movies, so if A now watches a movie M and rates it 9.8 then we can reccommend the movie to B aswell, since their tastes and likings seems to be very similar. So, based on the other user's data, they are feeded.
+
+- Even for linkedin feeds, you might see that the posts liked or commented by your connections are shown to you, this is also a type of collaborative filtering.
+
+## Hybrid : It is basically a mix of the previous 2
+
+In this project we shall use content based recommender system.
+
+
+PROJECT FLOW (high level overview) :
+
+1. Start with the data (preprocess)
+2. Build a Model based on the pre-processed data
+3. Build a Nice front-end for the user to interact with the model
+4. Seamlessly integrate model into the web application
+5. Deploy

@@ -1,0 +1,35 @@
+/* Add any custom styles here */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    /* margin: 20px; */
+    /* background-image: url('./assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    background: linear-gradient(
+      to right,
+      #cef4fc,
+      #cef8ec,
+      #f6dbe8,
+      #f6dbe8,
+      #cef8ec,
+      #cef4fc
+    );
+    background-size: 200% 100%; /* Double the width to accommodate the animation */
+    animation: gradientAnimation 4s linear infinite;
+    height: 100vh;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: -100% 0;
+    }
+  }
